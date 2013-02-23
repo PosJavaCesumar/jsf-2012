@@ -1,0 +1,13 @@
+.label {
+	width: 150px;
+	text-align: right;
+	font-weight: bold;
+}
+
+.ui-widget,.ui-widget .ui-widget {
+	font-size: 12px !important;
+}
+
+.ui-dialog {
+	top: 90px !important;
+}

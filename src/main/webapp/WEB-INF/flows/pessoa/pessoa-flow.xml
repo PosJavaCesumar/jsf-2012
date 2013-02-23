@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<view-state id="pessoaSelect">
+		<on-entry>
+			<evaluate expression="pessoaController.newFiltro()" result="viewScope.filtro" />
+		</on-entry>
+		<on-render>
+			<evaluate expression="pessoaController.filtrar(filtro)" result="viewScope.pessoas" result-type="dataModel" />
+		</on-render>
+		<transition on="info">
+			<set name="viewScope.pessoa" value="pessoas.selectedRow" />
+		</transition>
+	</view-state>
+
+</flow>
