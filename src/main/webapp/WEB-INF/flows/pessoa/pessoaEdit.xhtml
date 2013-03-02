@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="./../../template/ui.xhtml">
+
+    <ui:define name="content">
+        <h:form>
+            <p:fieldset legend="Dados da Pessoa">
+                <h:panelGrid columns="3">
+                    <h:outputLabel for="nome" value="Nome:"/>
+                    <p:inputText id="nome" value="#{pessoa.nome}"/>
+                    <p:message for="nome"/>
+                </h:panelGrid>
+            </p:fieldset>
+            <p:commandButton icon="ui-icon-disk"
+                             value="Salvar" action="salvar"/>
+            <p:commandButton icon="ui-icon-cancel" value="Cancelar" action="cancelar"/>
+        </h:form>
+    </ui:define>
+
+</ui:composition>
