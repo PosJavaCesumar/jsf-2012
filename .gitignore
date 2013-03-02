@@ -5,6 +5,7 @@
 /.settings
 /.springBeans
 /.metadata
+/faces-config.NavData
 /target
 /bin
 /*.tmp

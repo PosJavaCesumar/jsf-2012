@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "br.com.yanaga.jsf.webflow.app", scopedProxy = ScopedProxyMode.TARGET_CLASS, useDefaultFilters = false, includeFilters = { @Filter(Controller.class) })
+@ComponentScan(basePackages = "br.com.yanaga.jsf.webflow.app", scopedProxy = ScopedProxyMode.TARGET_CLASS, useDefaultFilters = false, includeFilters = @Filter(Controller.class))
 @ImportResource("classpath*:META-INF/spring/servlet/webflow-servlet.xml")
 public class WebflowServletConfig extends WebMvcConfigurerAdapter {
 
